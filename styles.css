@@ -13,3 +13,48 @@ header, footer {
     background: #101010;
     color: #ffffff;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline;
+}
+
+header h1, nav {
+    display: inline-block;
+}
+
+main {
+    width: 680px;
+    display: inline-block;
+}
+
+aside {
+    width: 270px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product {
+    border: 1px solid black;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
+
+img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.button {
+    padding: 5px;
+    display: inline-block;
+}
