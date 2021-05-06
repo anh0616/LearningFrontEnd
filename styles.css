@@ -1,3 +1,5 @@
+/*Can't set width of inline elements*/
+
 html {
     background: #353535;
 }
@@ -7,9 +9,11 @@ body {
     background: #ffffff;
     max-width: 1000px;
     margin: 0 auto; /*Remove default margin*/
+    color: #101010; /*Default text colour*/
 }
 
 header, footer {
+    padding: 20px 10px;
     background: #101010;
     color: #ffffff;
 }
@@ -20,34 +24,57 @@ ul {
     list-style-type: none;  /*Remove the bullets points for list*/
 }
 
+li {
+    /*list-style: square inside url(images/bullets.png);*/ /*Use image for bullet points*/
+    list-style-type: none;  /*Remove the bullets points for list*/
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /*yoink text color from parents elements*/
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff0000
+}
+
 header li {
     display: inline;    /*Make the list inline*/
+    margin: 10px;
 }
 
 header h1, nav {
     display: inline-block;  /*Make the block element inline*/
 }
 
+header h1 {
+    width: 57%;
+}
+
 main {
     width: 680px;
     display: inline-block;
+    padding: 10px;
 }
 
 aside {
     width: 270px;
     display: inline-block;
     vertical-align: top;
+    padding: 10px;
 }
 
 .product {
     box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels*/
-    border: 1px solid #353535;
+    border: 1px solid #101010;
     width: 210px; 
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     display: inline-block;
+    text-align: center;
 }
-
 
 img {
     max-width: 100%;
@@ -58,4 +85,77 @@ img {
 .button {
     padding: 5px;
     display: inline-block;
+}
+
+p:first-of-type {
+    color: #ff0000;
+}
+
+.button:last-of-type{
+    color: #ffffff;
+    background-color: #101010;
+    border: 1px solid #101010;
+}
+
+.button:last-of-type:hover{
+    color: #101010;
+    background-color: #ffffff;
+    border: 1px solid #101010;
+}
+
+
+/*Product details page*/
+.product-details {
+    width: 660px;
+}
+
+.product-details img{
+    max-width: 50%;
+    float: left;
+}
+
+
+/*Contact us page*/
+
+form {
+    padding: 10px;
+    margin: 10px 0px;
+    width: 600px;
+}
+
+form > div {
+    margin: 10px 0;
+}
+
+.inline_box label {
+    display: inline-block;  /*Make the inline element block*/
+    width: 100px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    width: 400px;
+}
+
+
+/*Table*/
+
+table {
+    width: 400px;
+    text-align: left;
+    margin: 20px 0px;
+}
+
+caption {
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+th,td {
+    padding: 5px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
