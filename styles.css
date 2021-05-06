@@ -133,8 +133,13 @@ form > div {
 }
 
 input[type="text"], input[type="email"], textarea {
+    /*positioning input boxes*/
     padding: 10px;
     width: 400px;
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
 }
 
 
