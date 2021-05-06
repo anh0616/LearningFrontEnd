@@ -1,0 +1,15 @@
+html {
+    background: #353535;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background: #101010;
+    color: #ffffff;
+}
