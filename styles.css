@@ -200,7 +200,7 @@ tr:hover {
 
 @media (min-width: 1350px) {
     header h1 {
-        width: 50%;
+        width: 60%;
     }
 
     aside {
@@ -208,10 +208,6 @@ tr:hover {
         display: inline-block;
         vertical-align: top;
         padding: 10px;
-    }
-
-    input[type="search"] {
-        width: 350px;
     }
     
     .product {
@@ -221,5 +217,9 @@ tr:hover {
 
     main {
         width: 85%;
+    }
+
+    input[type="search"] {
+        width: 20%;
     }
 }
