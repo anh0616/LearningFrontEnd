@@ -11,6 +11,7 @@ body {
     margin: 0 auto; /*Remove default margin*/
     color: #101010; /*Default text colour*/
     text-align: center;
+    max-width: 100vw; /*vw = relative to 1% of the width of the viewport*/
 }
 
 header, footer {
@@ -62,7 +63,7 @@ header h1 {
     box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels*/
     border: 1px solid #101010;
     /*width: 15%;*/
-    width: 100%;
+    width: 98%;
     margin: 5px;
     padding: 10px;
     text-align: center;
@@ -197,7 +198,7 @@ tr:hover {
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1350px) {
     header h1 {
         width: 65%;
     }
@@ -205,12 +206,9 @@ tr:hover {
     input[type="search"] {
         width: 15%;
     }
-
-    body {
-        max-width: 100vw; /*vw = relative to 1% of the width of the viewport*/
-    }
+    
     .product {
         display: inline-block;
-        width: 30%;
+        width: 325px;
     }
 }
