@@ -203,12 +203,23 @@ tr:hover {
         width: 65%;
     }
 
+    aside {
+        width: 10%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+    }
+
     input[type="search"] {
         width: 15%;
     }
     
     .product {
         display: inline-block;
-        width: 325px;
+        width: 300px;
+    }
+
+    main {
+        width: 85%;
     }
 }
