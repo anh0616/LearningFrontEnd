@@ -62,11 +62,12 @@ header h1 {
 .product {
     box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels*/
     border: 1px solid #101010;
-    /*width: 15%;*/
     width: 98%;
     margin: 5px;
     padding: 10px;
     text-align: center;
+    max-width: 300px;
+    display: inline-block;
 }
 
 img {
@@ -99,11 +100,12 @@ p:first-of-type {
 
 /*Product details page*/
 .product-details {
-    width: 660px;
+    max-width: 500px;
 }
 
 .product-details img{
-    max-width: 50%;
+    max-width: 40%;
+    max-height: 40%;
     float: left;
 }
 
@@ -141,7 +143,7 @@ input[type="checkbox"], input[type="radio"] {
 table {
     width: 400px;
     text-align: left;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 caption {
@@ -162,11 +164,6 @@ tr:hover {
     input[type="search"] {
         width: 40%;
         margin-left: 1.5em;
-    }
-
-    .product {
-        display: inline-block;
-        width: 45%;
     }
 }
 
@@ -191,7 +188,7 @@ tr:hover {
     }
 
     aside {
-        width: 20%;
+        width: 150px;
         display: inline-block;
         vertical-align: top;
         padding: 10px;
@@ -208,11 +205,6 @@ tr:hover {
         display: inline-block;
         vertical-align: top;
         padding: 10px;
-    }
-    
-    .product {
-        display: inline-block;
-        width: 300px;
     }
 
     main {
