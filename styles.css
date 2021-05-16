@@ -44,6 +44,7 @@ iframe {
     height: 80vw;
     max-width: 600px;
     max-height: 450px;
+    margin-bottom: 10px;
 }
 
 /*-----------------------------------HEADER CONFIG-----------------------------------*/
