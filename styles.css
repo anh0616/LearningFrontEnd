@@ -40,6 +40,10 @@ a:hover {
 
 iframe {
     border: 1px solid #101010;
+    width: 80vw;
+    height: 80vw;
+    max-width: 600px;
+    max-height: 450px;
 }
 
 /*-----------------------------------HEADER CONFIG-----------------------------------*/
@@ -120,26 +124,27 @@ p:first-of-type {   /*Change colour of first p in each elements*/
 form {
     padding: 10px;
     margin: 10px 0px;
-    width: 600px;
+    width: 85vw;
 }
 
 form > div {
     margin: 10px 0;
 }
 
-.inline_box label {
+.inline_box > label {
     display: inline-block;  /*Make the inline element block*/
-    width: 100px;
+    width: 85vw;
+    margin-top: 5px;
 }
 
 input[type="text"], input[type="email"], textarea {
     /*positioning input boxes*/
     padding: 10px;
-    width: 400px;
+    width: 60vw;
 }
 
 input[type="checkbox"], input[type="radio"] {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 
@@ -212,6 +217,21 @@ input[type="checkbox"], input[type="radio"] {
         grid-column: footer;
         text-align: left;
     }
+
+
+    form {
+        width: 600px;
+    }
+    
+    input[type="text"], input[type="email"], textarea {
+        width: 400px;
+    }
+
+    iframe {
+        width: 600px;
+        height: 450px;
+    }
+
 
 /*-----------------------------------PRODUCT DETAILS-----------------------------------*/
     .product-details-pic {
