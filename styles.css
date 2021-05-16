@@ -1,6 +1,3 @@
-/*Can't set width of inline elements*/
-/*em: font size according to parents elements ; rem: font size according to root elements */
-
 html {
     background: #353535;
 }
@@ -20,10 +17,6 @@ header, footer {
     color: #ffffff;
 }
 
-input[type="search"] {
-    width: 95%;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -31,7 +24,6 @@ ul {
 }
 
 li {
-    /*list-style: square inside url(images/bullets.png);*/ /*Use image for bullet points*/
     list-style-type: none;  /*Remove the bullets points for list*/
     line-height: 30px;
 }
@@ -46,9 +38,18 @@ a:hover {
     color: #ff0000
 }
 
+iframe {
+    border: 1px solid #101010;
+}
+
+/*-----------------------------------HEADER CONFIG-----------------------------------*/
 header li {
-    display: inline;    /*Make the list inline*/
+    display: inline;
     margin: 10px;
+}
+
+header h1 > a:hover{
+    color: inherit;
 }
 
 header h1, nav {
@@ -57,6 +58,28 @@ header h1, nav {
 
 header h1 {
     width: 100%;
+}
+
+input[type="search"] {
+    width: 95%;
+}
+
+
+/*-----------------------------------BODY CONFIG-----------------------------------*/
+
+hr {
+    max-width: 80%;
+    margin-bottom: 5px;
+}
+
+aside h3 {
+    margin-bottom: 5px;
+}
+
+.product-pic {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .product {
@@ -70,48 +93,30 @@ header h1 {
     display: inline-block;
 }
 
-img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;  /*Fit the picture inside the allowed size instead of streching*/
-}
-
 .button {
     padding: 5px;
     display: inline-block;
 }
 
-p:first-of-type {
+p:first-of-type {   /*Change colour of first p in each elements*/
     color: #ff0000;
 }
 
-.button:last-of-type{
+.button:last-of-type{   /*Change colour of last .button in each elements*/
     color: #ffffff;
     background-color: #101010;
     border: 1px solid #101010;
 }
 
-.button:last-of-type:hover{
+.button:last-of-type:hover{ /*Change colour of last .button in each elements when hover*/
     color: #101010;
     background-color: #ffffff;
     border: 1px solid #101010;
 }
 
 
-/*Product details page*/
-.product-details {
-    max-width: 500px;
-}
 
-.product-details img{
-    max-width: 40%;
-    max-height: 40%;
-    float: left;
-}
-
-
-/*Contact us page*/
-
+/*-----------------------------------CONTACT-----------------------------------*/
 form {
     padding: 10px;
     margin: 10px 0px;
@@ -138,80 +143,136 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 
-/*Table*/
-
-table {
-    width: 400px;
-    text-align: left;
-    margin: 10px 0px;
-}
-
-caption {
-    font-weight: bold;
-    border-bottom: 1px solid;
-    padding: 5px;
-}
-
-th,td {
-    padding: 5px;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-@media (min-width: 800px) {
-    input[type="search"] {
-        width: 40%;
-        margin-left: 1.5em;
-    }
-}
+/*-----------------------------------RESPONSIVE-----------------------------------*/
 
 @media (min-width: 1000px) {
     body {
+        display: grid;
+        grid-template-areas: "header header"
+                             "sidebar product"
+                             "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-gap: 5px;
+    }
+
+    header {
+        grid-row: header;
+        grid-column: header;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    header h1 {
+        display: grid;
+        justify-content: start;
+    }
+
+    header nav {
+        display: grid;
+        justify-content: end;
+        align-content: center;
+    }
+
+    .search-bar {
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        width: 1fr;
+        margin-left: 5px;
+    }
+
+    input[type="search"] {
+        max-height: 21px;
+        width: 300px;
+    }
+
+    main {
+        grid-row: product;
+        grid-column: product;
         text-align: left;
     }
 
-    header h1 {
-        width: 40%;
-    }
-
-    input[type="search"] {
-        width: 30%;
-    }
-
-    main {
-        width: 70%;
-        display: inline-block;
-        padding: 10px;
-        font-size: 12px;
-    }
-
     aside {
-        width: 150px;
-        display: inline-block;
-        vertical-align: top;
-        padding: 10px;
+        grid-row: sidebar;
+        grid-column: sidebar;
+        max-width: 150px;
+        padding: 5px;
+        text-align: left;
+        padding: 5px;
+    }
+
+    hr {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    footer {
+        grid-row: footer;
+        grid-column: footer;
+        text-align: left;
+    }
+
+/*-----------------------------------PRODUCT DETAILS-----------------------------------*/
+    .product-details-pic {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .product-details {
+        width: 550px;
+        height: 250px;
+        border: 1px solid #101010;
+    }
+    
+    table {
+        margin-left: 100px;
     }
 }
 
-@media (min-width: 1350px) {
-    header h1 {
-        width: 60%;
+@media (max-width: 1000px) {
+    .product-details-pic {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
     }
-
-    aside {
-        width: 150px;
-        display: inline-block;
-        vertical-align: top;
+    
+    .product-details {
+        box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels*/
+        border: 1px solid #101010;
+        width: 98%;
+        margin: 5px;
         padding: 10px;
+        text-align: center;
+        max-width: 300px;
+        display: inline-block;
     }
 
-    main {
-        width: 85%;
+    .main-details {
+        text-align: center;
     }
 
-    input[type="search"] {
-        width: 20%;
+    table {
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+
+table {
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+caption {
+    border-bottom: 1px solid #101010;
+}
+
+th,td {
+    padding-right: 10px;
+    padding-left: 10px;
 }
