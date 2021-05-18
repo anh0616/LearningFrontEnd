@@ -31,6 +31,7 @@ li {
 a {
     text-decoration: none;
     color: inherit; /*yoink text color from parents elements*/
+    transition-duration: 0.2s
 }
 
 a:hover {
@@ -114,9 +115,9 @@ p:first-of-type {   /*Change colour of first p in each elements*/
 }
 
 .button:last-of-type:hover{ /*Change colour of last .button in each elements when hover*/
-    color: #101010;
-    background-color: #ffffff;
-    border: 1px solid #101010;
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
 }
 
 
@@ -125,6 +126,7 @@ p:first-of-type {   /*Change colour of first p in each elements*/
 form {
     padding: 10px;
     margin: 10px 0px;
+    padding-left: 0px;
     width: 85vw;
 }
 
@@ -148,6 +150,23 @@ input[type="checkbox"], input[type="radio"] {
     margin-right: 10px;
 }
 
+
+/*-----------------------------------FOOTER CONFIG-----------------------------------*/
+
+footer img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.social-footer li {
+    display: inline;
+    margin: 10px;
+}
+
+.social-nav {
+    display: block;
+    padding-top: 5px;
+}
 
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 
@@ -216,9 +235,28 @@ input[type="checkbox"], input[type="radio"] {
     footer {
         grid-row: footer;
         grid-column: footer;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .links-nav {
         text-align: left;
     }
 
+    .links-footer li {
+        margin-bottom: 15px;
+    }
+
+    footer .social-nav {
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    .social-footer li {
+        display: block;
+        margin: 0px;
+    }
 
     form {
         width: 600px;
