@@ -1,5 +1,5 @@
 html {
-    background: #353535;
+    background: #ffffff;
 }
 
 body {
@@ -180,6 +180,7 @@ input[type="checkbox"], input[type="radio"] {
                              "sidebar product"
                              "footer footer";
         grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 100% auto;
         grid-gap: 5px;
     }
 
