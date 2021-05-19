@@ -153,19 +153,14 @@ input[type="checkbox"], input[type="radio"] {
 
 /*-----------------------------------FOOTER CONFIG-----------------------------------*/
 
-footer img {
-    max-width: 30px;
-    max-height: 30px;
-}
-
 .social-footer li {
     display: inline;
     margin: 10px;
+    font-size: 20px;
 }
 
 .social-nav {
     display: block;
-    padding-top: 5px;
 }
 
 /*-----------------------------------RESPONSIVE-----------------------------------*/
@@ -244,13 +239,9 @@ footer img {
         text-align: left;
     }
 
-    .links-footer li {
-        margin-bottom: 15px;
-    }
-
     footer .social-nav {
         text-align: right;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     .social-footer li {
