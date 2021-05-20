@@ -92,7 +92,7 @@ aside h3 {
 }
 
 .product {
-    box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels*/
+    box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels)*/
     border: 1.5px solid #101010;
     width: 98%;
     margin: 5px;
