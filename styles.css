@@ -55,7 +55,7 @@ a {
     transition-duration: 0.2s;
 }
 
-aside a:hover, header a:hover {
+aside a:hover, header a:hover, footer header a:hover {
     font-weight: 800;
     letter-spacing: 3px;
 }
