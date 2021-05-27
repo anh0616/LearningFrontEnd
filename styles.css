@@ -55,7 +55,7 @@ a {
     transition-duration: 0.2s;
 }
 
-a:hover:not(.button) {
+aside a:hover, header a:hover {
     font-weight: 800;
     letter-spacing: 3px;
 }
@@ -110,8 +110,40 @@ hr {
 
 .product-pic {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.product-cap {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 288px;
+
+    color: #ffffff;
+    font-size: 18px;
+
+    background: rgba(10,10,10,0);
+
+    opacity: 0;
+
+    transition: all 0.3s ;
+}
+
+.product-cap:hover {
+    opacity: 1;
+    background: rgba(10,10,10,0.9);
 }
 
 .product {
