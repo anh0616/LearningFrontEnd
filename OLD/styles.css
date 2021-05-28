@@ -1,0 +1,349 @@
+body {
+    font-family: 'Quicksand', sans-serif;   /*Set font*/
+    background: #ffffff;
+    margin: 0 auto;     /*Remove default margin*/
+    color: #101010;   /*Default text colour*/
+    text-align: center;
+    max-width: 100vw;   /*vw = relative to 1% of the width of the viewport*/
+}
+
+header, footer {
+    padding: 10px 10px;
+    background: #101010;
+    color: #ffffff;
+    min-height: 110px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;  /*Remove the bullets points for list*/
+}
+
+li {
+    list-style-type: none;  /*Remove the bullets points for list*/
+    line-height: 30px;
+}
+
+.search-bar input {
+
+    width: 95%;
+    border: 1px solid #ffffff;
+    margin: 10px 0 0 0;
+    padding: 5px 0 5px 0;
+
+    color: #ffffff;
+    background: #101010;
+}
+
+.search-bar input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+    font-size: 15px;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.search-bar input::-webkit-search-decoration,
+.search-bar input::-webkit-search-cancel-button,
+.search-bar input::-webkit-search-results-button,
+.search-bar input::-webkit-search-results-decoration { display: none; }
+
+a {
+    text-decoration: none;
+    color: inherit; /*yoink text color from parents elements*/
+    transition-duration: 0.2s;
+}
+
+aside a:hover, header a:hover, footer a:hover {
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+iframe {
+    border: 1px solid #101010;
+    width: 80vw;
+    height: 80vw;
+    max-width: 600px;
+    max-height: 450px;
+    margin: 0 0 10px 0;
+}
+
+
+/*-----------------------------------HEADER CONFIG-----------------------------------*/
+header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: 1fr;
+}
+
+header li {
+    display: inline;
+    margin: 10px;
+}
+
+header .title-img {
+    max-height: 80px;
+    margin: auto;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-----------------------------------BODY CONFIG-----------------------------------*/
+main {
+    margin: 20px 0 20px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+hr {
+    max-width: 80%;
+}
+
+.product-pic {
+    max-width: 100%;
+
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.product-cap {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 288px;
+
+    color: #ffffff;
+    font-size: 18px;
+
+    background: rgba(10,10,10,0);
+
+    opacity: 0;
+
+    transition: all 0.3s ;
+}
+
+.product-cap:hover {
+    opacity: 1;
+    background: rgba(10,10,10,0.7);
+}
+
+.product {
+    display: grid;
+    justify-content: center;
+
+    box-sizing: border-box; /*Fit everything inside the border (no unwanted extra pixels)*/
+    border: 1px solid #101010;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    max-width: 300px;
+}
+
+.product h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.product p {
+    margin: 0;
+}
+
+p:first-of-type {   /*Change colour of first p in each elements*/
+    color: #ff0000;
+}
+
+.button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    margin: 5px 0 0 0;
+
+    text-decoration: none;
+	color: #101010;
+	font-size: 18px;
+
+    background: #101010;
+	border: 1px solid #101010;
+	position: relative;
+
+    overflow: hidden;
+}
+
+.button:before {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    content: "";
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	background: #ffffff;
+
+    transform: translateX(-100%);   /* Change this for slide direction */
+    transition: all 0.5s;
+}
+
+.button:hover:before {
+    transform: translateX(0);
+}
+
+.button:after {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    content: "Add To Cart";
+	position: absolute;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+    transition: all 0.5s;
+}
+
+.button:hover:after {
+    color: #101010;
+}
+
+
+/*-----------------------------------FOOTER CONFIG-----------------------------------*/
+.social-footer li {
+    display: inline;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.social-nav {
+    display: block;
+}
+
+
+/*-----------------------------------RESPONSIVE-----------------------------------*/
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-areas: "header header"
+                             "sidebar product"
+                             "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 100% auto;
+    }
+
+    header {
+        grid-row: header;
+        grid-column: header;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    header nav {
+        display: grid;
+        justify-content: end;
+        align-content: center;
+    }
+
+    header .title-img {
+        margin: 0;
+    }
+    
+
+    .search-bar {
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        width: 1fr;
+        margin-left: 5px;
+    }
+
+    .search-bar input {
+        max-height: 21px;
+        width: 300px;
+        margin-top: 0px;
+        padding: 5px;
+    }
+
+    .search-bar input::placeholder {
+        text-align: left;
+    }
+
+    main {
+        grid-row: product;
+        grid-column: product;
+
+        justify-content: left;
+    }
+
+    aside {
+        grid-row: sidebar;
+        grid-column: sidebar;
+        max-width: 150px;
+        padding: 5px 5px 5px 15px;
+        text-align: left;
+    }
+
+    hr {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    footer {
+        grid-row: footer;
+        grid-column: footer;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .links-nav {
+        text-align: left;
+    }
+
+    footer .social-nav {
+        text-align: right;
+        margin: 2px 10px 0 0;
+    }
+
+    .social-footer li {
+        display: block;
+        margin: 0px;
+    }
+
+    iframe {
+        width: 600px;
+        height: 450px;
+    }
+}

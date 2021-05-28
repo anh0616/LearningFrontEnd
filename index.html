@@ -5,160 +5,280 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Anh Store</title>
-        <link rel="icon" href="images/icon.png">
+        <title>A H</title>
+        <link rel="icon" href="resources/icon.svg">
 
-        <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+        <!-- Font from Google -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Font from Font Awesome -->
         <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="styles.css">
     </head>
 
+   
+    
     <body>
         <header>
+            <!-- Logo -->
             <a href="index.html">
-                <img src="images/icon.png" alt="Something went wrong" class="title-img">
+                <img src="resources/icon.svg" alt="Something went wrong" class="title-img">
             </a>
+    
+            <!-- Navigate buttons -->
             <nav>
                 <ul>
                     <li><a href="index.html">home</a></li>
-                    <li><a href="#">cart</a></li>
                     <li><a href="#">contact</a></li>
+                    <li><a href="#">cart</a></li>
                 </ul>
             </nav>
+    
+            <!-- Search bar -->
             <div class="search-bar">
-                <input type="search" placeholder="Search...">
+                <table class="search-bar-con">
+                    <tr>
+                        <td>
+                            <input type="search" class="search">
+                        </td>
+                        <td class="search-button">
+                            <a href="#" target="_blank" class="fa fa-search"></a>
+                        </td>
+                    </tr>
+                </table>      
             </div>
         </header>
 
-        <aside> <!--use to divide up section instead of div-->
-            <section>
-                <h3>Category</h3>
-                <hr>
-                <ul>
-                    <li><a href="#">All items</a></li>
-                    <li><a href="#">Cameras</a></li>
-                    <li><a href="#">Laptops</a></li>
-                    <li><a href="#">Phones</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Others</a></li>
-                </ul>
-            </section>
 
-            <section>
-                <div> </div>
-                <h3>Price <span>($)</span></h3>
-                <hr>
-                <ul>
-                    <li><a href="#">1-9</a></li>
-                    <li><a href="#">10-29</a></li>
-                    <li><a href="#">30-59</a></li>
-                    <li><a href="#">60-99</a></li>
-                    <li><a href="#">100+</a></li>
-                </ul>
-            </section>
-        </aside>
         
-        <!--Main section to display products-->
         <main>
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/controllers.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/controllers.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Controllers</a>
+                    <span class="product-price">79.99</span>   
                 </div>
-
-                <h4><a href="#">Controllers</a></h4>
-                <p>$ 79.99</p>
-                <a href="#" class="button">Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/headphones.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/headphones.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Headphones</a>
+                    <span class="product-price">59.99</span>   
                 </div>
-
-                <h4><a href="#">Headphones</a></h4>
-                <p>$ 59.99</p>
-                <a href="#" class="button"> Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/cameras.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/cameras.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Cameras</a>
+                    <span class="product-price">69.99</span>   
                 </div>
-
-                <h4><a href="#">Cameras</a></h4>
-                <p>$ 69.99</p>
-                <a href="#" class="button">Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/microphones.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/microphones.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Microphones</a>
+                    <span class="product-price">199.99</span>   
                 </div>
-
-                <h4><a href="#">Microphones</a></h4>
-                <p>$ 199.99</p>
-                <a href="#" class="button">Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/cables.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/cables.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Cables</a>
+                    <span class="product-price">19.99</span>   
                 </div>
-
-                <h4><a href="#">Cables</a></h4>
-                <p>$ 19.99</p>
-                <a href="#" class="button">Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/lenses.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/lenses.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Lenses</a>
+                    <span class="product-price">299.99</span>   
                 </div>
-
-                <h4><a href="#">Lenses</a></h4>
-                <p>$ 299.99</p>
-                <a href="#" class="button">Add To Cart</a>
             </div>
 
             <div class="product">
-                <div class="product-pic">
-                    <img src="images/holders.jpg" alt="Something went wrong" class="product-img">
-                    <a href="#" class="product-cap">Details</a>
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/60d.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">60 Dollars</a>
+                    <span class="product-price">60.99</span>   
                 </div>
+            </div>
 
-                <h4><a href="#">Placeholders</a></h4>
-                <p>$ 9.99</p>
-                <a href="#" class="button">Add To Cart</a>
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/cassette_tapes.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Cassette Tapes</a>
+                    <span class="product-price">3.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/earbuds.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Earbuds</a>
+                    <span class="product-price">299.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/film_cameras.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Film Cameras</a>
+                    <span class="product-price">249.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/35mm_films.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">35mm Films</a>
+                    <span class="product-price">79.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/laptops.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Laptops</a>
+                    <span class="product-price">1,299.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/phones.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Phones</a>
+                    <span class="product-price">1,199.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/speakers.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Speakers</a>
+                    <span class="product-price">899.99</span>   
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-con">
+                    <div class="product-pic">
+                        <img src="resources/televisions.jpg" alt="Something went wrong" class="product-img">
+                        <div class="product-cap">
+                            <a href="#" class="product-det">Details</a>
+                            <a href="#" class="add-button"></a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-name">Televisions</a>
+                    <span class="product-price">59.99</span>   
+                </div>
             </div>
         </main>
-
-        <footer>
-            <nav class="links-nav">
-                <ul class="links-footer">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="https://github.com/anh0616/LearningFrontEnd" target="_blank">about</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-            </nav>
-
-            <nav class="social-nav">
-                <ul class="social-footer">
-                    <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
-                    <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
-                </ul>
-            </nav>
-        </footer>
     </body>
+
+
+
+    <footer>
+        <nav>
+            <ul class="social-footer">
+                <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
+            </ul>
+        </nav>
+    </footer>
 </html>

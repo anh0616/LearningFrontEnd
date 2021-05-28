@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Anh Store</title>
+        <link rel="icon" href="images/icon.jpg">
+
+        <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a href="index.html">Anh Store</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="">cart</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="search" placeholder="Search">
+            </div>
+        </header>
+        
+        <!--Main section-->
+        <main class="main-contact">
+            <h2>Contact:</h2>
+
+            <form>
+                <div class="inline_box">
+                    <label for="name_id">Name:</label><input type="text" placeholder="Enter your name" id="name_id" name="name">
+                </div>
+
+                <div class="inline_box">
+                    <label for="email_id">Email:</label><input type="text" placeholder="Enter your email"id="email_id" name="email">
+                </div>
+
+                <div class="inline_box">
+                    <label for="message_id">Message:</label><textarea cols="30" rows="5" id="message_id" name="message"></textarea>
+                </div>
+
+                <div class="inline_box">
+                    <label for="subject">Subject:</label>
+                    <input type="text" list="subjects_id" id="subject" placeholder="Enter your subject">
+                    <datalist id="subjects_id">
+                        <option value="Returns" id="returns_sub"></option>
+                        <option value="Faulty item" id="faulty_item_sub"></option>
+                        <option value="Delivery" id="delivery_sub"></option>
+                        <option value="Order tracking" id="order_tracking_sub"></option>
+                        <option value="Advices" id="advices_sub"></option>
+                        <option value="Other" id="other_sub"></option>
+                    </datalist>
+                </div>
+
+                <div class="check_box">
+                    <p>Subscribe to future offers by:</p>
+
+                    <label for="newsletter">Newsletter</label>
+                    <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+
+                    <label for="email">Email</label>
+                    <input type="checkbox" id="email" name="subscribe" value="email">
+
+                    <label for="post">Post</label>
+                    <input type="checkbox" id="post" name="subscribe" value="post">
+                </div>
+
+                <div>
+                    <p>How would you like us to response?</p>
+
+                    <label for="phoneResponse">Phone</label>
+                    <input type="radio" id="phoneResponse" name="response" value="phone">
+
+                    <label for="emailResponse">Email</label>
+                    <input type="radio" id="emailResponse" name="response" value="email">
+                </div>
+
+                <div>
+                    <input type="submit">
+                    <input type="reset"> 
+                    <!-- <button type="submit">Send message</button> -->
+                </div>
+            </form>
+
+            <iframe loading="lazy" allowfullscreen 
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7wZKIO2jiFQRiNJp9WBl8mI&key=AIzaSyAIVoiLThHyZglC3FHoYpBCUYWXPBYAm-A">
+                <p>Your browser does not support iframes</p>
+            </iframe>
+        </main>
+
+        <footer>
+            <nav class="links-nav">
+                <ul class="links-footer">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="https://github.com/anh0616/LearningFrontEnd" target="_blank">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="social-nav">
+                <ul class="social-footer">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
