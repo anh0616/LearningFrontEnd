@@ -35,7 +35,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">home</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#social-footer-id">contact</a></li>
                     <li><a href="#">cart</a></li>
                 </ul>
             </nav>
@@ -58,6 +58,21 @@
 
         
         <main>
+            <div class="showcase">
+                <div class="showcase-con">
+                    <img src="resources/show_cassette_tapes.jpg" alt="Something went wrong" class="showcase-pic">
+                    <div class="showcase-det">
+                        <p>Just Dropped</p>
+                        <p class="shocase-deep">Maximize the rate.</p>
+                        <p class="shocase-deep">Minimize the price.</p>
+                    </div>
+
+                    <div class="showcase-det2">
+                        <a href="#justDropped" class="showcase-button"></a>
+                    </div>
+                </div>
+            </div>
+
             <div class="product">
                 <div class="product-con">
                     <div class="product-pic">
@@ -156,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="product">
+            <div class="product" id="justDropped">
                 <div class="product-con">
                     <div class="product-pic">
                         <img src="resources/cassette_tapes.jpg" alt="Something went wrong" class="product-img">
@@ -274,11 +289,13 @@
 
     <footer>
         <nav>
-            <ul class="social-footer">
+            <ul class="social-footer" id="social-footer-id">
                 <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
                 <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
                 <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
             </ul>
         </nav>
     </footer>
+
+    <script src="scripts.js"></script>
 </html>

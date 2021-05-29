@@ -14,8 +14,6 @@ header, footer {
 
     background: #101010;
     padding: 10px 10px 15px 10px;
-
-    min-height: 110px;
 }
 
 header nav, footer nav {
@@ -86,7 +84,7 @@ header li {
 }
 
 header .title-img {
-    max-height: 70px;
+    max-height: 55px;
     margin: auto;
 }
 
@@ -128,10 +126,14 @@ header .title-img {
 
 .search-button {
     width: 25px;
+
+    opacity: 50%;
+
+    transition: 0.2s;
 }
 
-.search-button a:hover {
-    transform: scale(1.1);
+.search-button:hover {
+    opacity: 100%;
 }
 
 .search-bar input::-webkit-search-decoration,
@@ -157,10 +159,15 @@ footer {
 .social-footer li {
     display: inline;
     margin: 0 15px 0 15px;
+
+    font-size: 20px;
+    opacity: 50%;
+
+    transition: 0.2s;
 }
 
-footer a:hover {
-    transform: scale(1.1);
+.social-footer li:hover {
+    opacity: 100%;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -179,6 +186,119 @@ main {
     flex-direction: row;
 
     justify-content: center;
+}
+
+.showcase {
+    width: 90vw;
+    min-width: 300px;
+    margin: 15px 0 0 0;
+}
+
+.showcase-pic {
+    display: block;
+    width: 90vw;
+    min-width: 300px;
+    height: 400px;
+    object-fit: cover;
+
+    transition: transform 50s;
+    transition-timing-function: ease-out;
+}
+
+.showcase-pic:hover {
+    transform: scale(2);
+}
+
+.showcase-con {
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-det {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    color: #ffffff;
+    margin: 15px 0 0 15px;
+}
+
+.showcase-det2 {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    color: #ffffff;
+    margin: 0 0 15px 15px;
+}
+
+.showcase-det p {
+    margin: 0;
+    text-shadow: 1px 1px #101010;
+}
+
+.shocase-deep {
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.showcase-button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    width: 185px;
+    height: 40px;
+
+	position: relative;
+
+    overflow: hidden;
+}
+
+.showcase-button:before {
+    content: "";
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	background: #ffffff;
+
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.showcase-button:hover:before {
+    transform: translateX(0);
+}
+
+.showcase-button:after {
+    content: "Go to product";
+	position: absolute;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	color: inherit;
+
+    transition: all 0.5s;
+}
+
+.showcase-button:hover:after {
+    color: #101010;
 }
 
 .product {
@@ -322,11 +442,13 @@ main {
 @media (min-width: 1000px) {
 
     header {
-        grid-template-columns: 100px 1fr 300px;
+        grid-template-columns: 100px 1fr 200px;
     }
 
     .search-bar {
-        width: 300px;
+        margin: 0;
+
+        width: 200px;
     }
 
     header nav {
