@@ -1,25 +1,5 @@
 /*--------------------------------------GENERAL CONFIG--------------------------------------*/
 
-header, footer {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
-    grid-template-columns: 1fr;
-
-    color: #ffffff;
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-
-    background: #101010;
-    padding: 10px 10px 15px 10px;
-}
-
-header nav, footer nav {
-    margin: auto;
-}
-
 body {
     display: grid;
 
@@ -37,6 +17,23 @@ body {
     margin: 0 auto;     
 
     max-width: 100vw;   
+}
+
+header, footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: 1fr;
+
+    color: #ffffff;
+
+    background: #101010;
+    padding: 10px 10px 15px 10px;
+}
+
+header nav, footer nav {
+    margin: auto;
 }
 
 a {
@@ -455,4 +452,17 @@ main {
         margin: 0 10px 0 0;
         text-align: right;
     }
+}
+
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0;
+}
+body::-webkit-scrollbar-track {
+    background: none;
+}
+body::-webkit-scrollbar-thumb {
+    background: rgba(16, 16, 16, 0.25);
+    border-radius: 50px;
 }
