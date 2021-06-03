@@ -1,5 +1,10 @@
 /*--------------------------------------GENERAL CONFIG--------------------------------------*/
 
+:root {
+    --main-color: #101010;
+    --side-color: #ffffff;
+}
+
 body {
     display: grid;
 
@@ -8,12 +13,12 @@ body {
                          "product"
                          "footer";
 
-    color: #101010;
+    color: var(--main-color);
     font-size: 18px; 
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     
-    background: #ffffff;
+    background: var(--side-color);
     margin: 0 auto;     
 
     max-width: 100vw;   
@@ -26,9 +31,9 @@ header, footer {
 
     grid-template-columns: 1fr;
 
-    color: #ffffff;
+    color: var(--side-color);
 
-    background: #101010;
+    background: var(--main-color);
     padding: 10px 10px 15px 10px;
 }
 
@@ -89,7 +94,7 @@ header .title-img {
     margin: auto;
     padding: 0;
     
-    border: 1px solid white;
+    border: 1px solid var(--side-color);
     border-radius: 50px;
     width: 95vw;
 }
@@ -110,7 +115,7 @@ header .title-img {
 
     padding: 0 5px 0 5px;
 
-    color: #ffffff;
+    color: var(--side-color);
     font-size: 15px;
     font-family: inherit;
 
@@ -122,7 +127,8 @@ header .title-img {
 }
 
 .search-button {
-    width: 25px;
+    width: max-content;
+    padding: 0 5px 0 0;
 
     opacity: 50%;
 
@@ -217,7 +223,7 @@ main {
     top: 0;
     left: 0;
 
-    color: #ffffff;
+    color: var(--side-color);
     margin: 15px 0 0 15px;
 }
 
@@ -227,13 +233,13 @@ main {
     bottom: 0;
     left: 0;
 
-    color: #ffffff;
+    color: var(--side-color);
     margin: 0 0 15px 15px;
 }
 
 .showcase-det p {
     margin: 0;
-    text-shadow: 1px 1px #101010;
+    text-shadow: 1px 1px var(--main-color);
 }
 
 .shocase-deep {
@@ -266,7 +272,7 @@ main {
 	height: 100%;
 	width: 100%;
 
-	background: #ffffff;
+	background: var(--side-color);
 
     transform: translateX(-100%);
     transition: all 0.5s;
@@ -295,7 +301,7 @@ main {
 }
 
 .showcase-button:hover:after {
-    color: #101010;
+    color: var(--main-color);
 }
 
 .product {
@@ -339,7 +345,7 @@ main {
     height: 300px;
     min-width: 300px;
 
-    color: #ffffff;
+    color: var(--side-color);
     background: rgba(0, 0, 0, 0);
 
     display: flex;
@@ -398,7 +404,7 @@ main {
 	height: 100%;
 	width: 100%;
 
-	background: #ffffff;
+	background: var(--side-color);
 
     transform: translateX(-100%);
     transition: all 0.5s;
@@ -427,7 +433,7 @@ main {
 }
 
 .add-button:hover:after {
-    color: #101010;
+    color: var(--main-color);
 }
 
 /*-------------------------------------------------------------------------------------------*/
