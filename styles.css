@@ -519,7 +519,6 @@ footer {
     }
 
     header nav {
-        margin: 0 10px 0 0;
         text-align: right;
     }
 
@@ -546,7 +545,8 @@ footer {
         grid-template-columns: 70px 70px 70px 1fr;
     }
 
-    .navbar-links li a:not(.fa-search) {    
+    .navbar-links li a:not(.fa-search) {
+        margin: 5px 0 0 0;    
         padding: 0;
     }
 }
