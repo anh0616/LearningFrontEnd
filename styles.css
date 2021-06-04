@@ -127,7 +127,7 @@ header .title-img {
 }
 
 .search-button {
-    width: max-content;
+    width: 16px;
     padding: 0 5px 0 0;
 
     opacity: 50%;
