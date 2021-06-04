@@ -560,7 +560,7 @@ body::-webkit-scrollbar-track {
     background: none;
 }
 body::-webkit-scrollbar-thumb {
-    background: rgba(16, 16, 16, 0.25);
+    background: rgba(16, 16, 16, 0.50);
     border-radius: 50px;
 }
 
