@@ -1,3 +1,22 @@
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+let toggleOpen = false;
+
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+
+    if (!toggleOpen) {
+        toggleButton.classList.add('open');
+        navbarLinks.classList.add('fade');
+        toggleOpen = true;
+    } else {
+        toggleButton.classList.remove('open');
+        navbarLinks.classList.remove('fade');
+        toggleOpen = false;
+    }
+});
+
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {

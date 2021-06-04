@@ -26,37 +26,39 @@
     
     <body>
         <header>
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="resources/icon.svg" alt="Something went wrong" class="title-img">
-            </a>
-    
-            <!-- Navigate buttons -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="#social-footer-id">contact</a></li>
-                    <li><a href="#">cart</a></li>
-                </ul>
+            <nav class="navbar">
+                <div class="brand-icon">
+                    <a href="index.html">
+                        <img src="resources/icon.svg" alt="Something went wrong" class="title-img">
+                    </a>
+                </div>
+
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                </a>
+
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="#social-footer-id">contact</a></li>
+                        <li><a href="#">cart</a></li>
+                        <li>
+                            <table class="search-bar-con">
+                                <tr>
+                                    <td>
+                                        <input type="search" class="search">
+                                    </td>
+                                    <td class="search-button">
+                                        <a href="#" target="_blank" class="fa fa-search"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-    
-            <!-- Search bar -->
-            <div class="search-bar">
-                <table class="search-bar-con">
-                    <tr>
-                        <td>
-                            <input type="search" class="search">
-                        </td>
-                        <td class="search-button">
-                            <a href="#" target="_blank" class="fa fa-search"></a>
-                        </td>
-                    </tr>
-                </table>      
-            </div>
         </header>
 
-
-        
         <main>
             <div class="showcase">
                 <div class="showcase-con">
@@ -283,20 +285,18 @@
                 </div>
             </div>
         </main>
+
+        <footer>
+            <nav>
+                <ul class="social-footer" id="social-footer-id">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
     </body>
-
-
-
-    <footer>
-        <nav>
-            <ul class="social-footer" id="social-footer-id">
-                <li><a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a></li>
-            </ul>
-        </nav>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
 </html>
