@@ -1,4 +1,4 @@
-It's just me learning and practicing some front-end stuff.
+It's just me learning and practicing some HTML and CSS.
 
 <p><b><a href="https://anh-store.netlify.app/">Netlify Pages</a></b> if you're interested in what I created so far. (<a href="https://anh-store-old.netlify.app/">Old</a> version of the site for comparision purposes).</p>
 <p><b><a href="https://anh0616.github.io/LearningFrontEnd/">GitHub Pages</a></b> (Load slower in some cases).</p>
